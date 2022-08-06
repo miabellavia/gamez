@@ -44,10 +44,6 @@ h3 {
   transform: translateY(-8px);
 } */
 
-.logo {
-  width: 40px;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -74,6 +70,15 @@ li :hover {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100%);
@@ -81,58 +86,52 @@ li :hover {
   scroll-behavior: smooth;
 }
 
-.wrapper section {
+section {
   width: 100%;
   position: relative;
-  display: flex;
-  grid-template-columns: repeat(10, auto);
-  grid-column-end: auto;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   margin: 20px 0;
+
+
 }
 
-.wrapper section .item {
+section .item {
   padding: 0 2px;
-  transition: 250ms all;
+  transition: 0.5s;
+
+
 }
 
-.wrapper section .item:hover {
+section .item:hover {
   margin: 0 40px;
-  transform: scale(1.2);
+  translate: scale(1.2);
 }
 
-.wrapper section a {
-  position: absolute;
-  color: #d9d9d9;
-  text-decoration: none;
-  font-size: 6em;
-  background: #141414;
-  width: 80px;
-  padding: 20px;
-  text-align: center;
-  z-index: 1;
-  align-items: center;
-
-
+.wrapper a {
+      position: absolute;
+      color: #fff;
+      text-decoration: none;
+      font-size: 6em;
+      background: rgb(0, 0, 0);
+      width: 80px;
+      padding: 20px;
+      text-align: center;
+      z-index: 1;
 }
 
-  .wrapper section a:nth-of-type(1) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  }
+.wrapper a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
 
-  .wrapper section a:nth-of-type(2) {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0%);
-  }
-
-@media only screen and (max-width: 600px) {
-  a.arrow__btn {
-    display: none;
-  }
+.wrapper a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 img {
