@@ -19,6 +19,14 @@ h1 {
   text-decoration-thickness: 1px;
   text-underline-offset: 6px;
   text-align: center;
+  margin-right: 160px;
+}
+
+h1:hover {
+  background: -webkit-linear-gradient(0deg, #ae75e8, #f18805);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 nav {
@@ -31,13 +39,10 @@ nav {
 }
 
 h3 {
-
   color: #ae75e8;
-  text-decoration: underline;
-  text-decoration-color: #F18805;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 12px;
+  transition-duration: 0.5s;
 }
+
 
 ul {
   list-style-type: none;
@@ -65,6 +70,15 @@ li :hover {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100%);
@@ -72,61 +86,74 @@ li :hover {
   scroll-behavior: smooth;
 }
 
-.wrapper section {
+section {
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(10, auto);
-  grid-column-end: auto;
+  grid-template-columns: repeat(5, auto);
   margin: 20px 0;
-  display: flex;
+
+
 }
 
-.wrapper section .item {
+section .item {
   padding: 0 2px;
-  transition: 250ms all;
+  transition: 0.5s;
+
 }
 
-.wrapper section .item:hover {
+section .item:hover {
   margin: 0 40px;
-  transform: scale(1.2);
+  translate: scale(1.2);
 }
 
-.wrapper section a {
-  position: absolute;
-  color: #d9d9d9;
-  text-decoration: none;
-  font-size: 6em;
-  background: #141414;
-  width: 80px;
-  padding: 20px;
-  text-align: center;
-  z-index: 1;
-  justify-content: end;
-
-
+.wrapper a {
+      position: absolute;
+      color: #fff;
+      text-decoration: none;
+      font-size: 6em;
+      background: rgb(0, 0, 0);
+      width: 80px;
+      padding: 20px;
+      text-align: center;
+      z-index: 1;
 }
 
-  .wrapper section a:nth-of-type(1) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  }
+.wrapper a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
 
-  .wrapper section a:nth-of-type(2) {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0%);
-  }
-
-@media only screen and (max-width: 600px) {
-  a.arrow__btn {
-    display: none;
-  }
+.wrapper a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 img {
   width: 240px;
+}
+
+hr {
+  border-color: #F18805;
+  background-color: #F18805;
+  height: 2px;
+}
+
+#articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 160px;
+}
+
+.article img {
+  width: 480px;
+}
+
+#h3_news {
+  margin-left: 160px;
 }
